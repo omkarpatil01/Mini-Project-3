@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Speech Emotion Recognition</title>
+
+    <link rel="shortcut icon" href="img/favicon.png">
+
+    <link rel="stylesheet" type="text/css" href="../static/css/reset.css" />
+    <link rel="stylesheet" type="text/css" href="../static/css/style-responsive.css" />
+    <link rel="stylesheet" type="text/css" href="../static/css/style.css" />
+
+
+</head>
+
+<body>
+
+    <div class="container">
+
+
+        <section class="menu" id="home">
+
+            <div class="menu-content">
+
+                <div class="logo">SER</div>
+
+                <ul id="menu">
+                    <li><a href="#home">HOME</a></li>
+                    <li><a href="#start">START</a></li>
+                    <li><a href="#about-us">ABOUT US</a></li>
+                    <li><a href="#contact">CONTACT</a></li>
+                </ul>
+            </div>
+
+
+        </section>
+
+        <div class="clear"></div>
+        <section class="start-page parallax-background">
+
+            <div class="opacity"></div>
+            <div class="content">
+                <div class="text">
+
+                    <h1>Welcome<br />
+                        to <span>Speech Emotion Recognition</span></h1>
+                    <p>Try yourself with it</p>
+
+                    <a href="#start">
+                        <div class="read-more">Start</div>
+                    </a>
+
+                </div>
+                <div class="arrow-down"></div>
+            </div>
+
+        </section>
+
+        <div class="clear"></div>
+
+
+
+        <section class="about-us" id="start">
+            <h1>Prediction</h1>
+
+            <div id="speechContainer">
+                <h2>Upload new File</h2>
+                <br>
+                <form method="post" enctype="multipart/form-data">
+                    <input type="file" name="file" />
+                    <br>
+                    <input type="submit" id="submitButton" value="Predict" />
+                </form>
+                <div style="align-content: center;">
+
+                    {% if transcript != "" %}
+
+                    <p id="speechText" style="align-items: center;">
+                    <h1 style="color: green; display: inline;">{{ transcript }}</h1>
+                    </p>
+
+                    {% endif %}
+                    {% if filename %}
+                    <img src="{{filename}}" style="width: 200px; height: 200px; align-items: center; ">
+
+                    {% endif %}
+
+                </div>
+
+
+
+            </div>
+
+        </section>
+        <div class="clear"></div>
+
+        <section class="about-us">
+        </section>
+
+
+        <section class="about-us" id="about-us">
+            <div>
+                <h1>ABOUT US</h1>
+                <hr />
+                <p>
+                    As human beings speech is amongst the most natural way to express ourselves. We depend so much on it
+                    that we recognize its importance when resorting to other communication forms like emails and text
+                    messages where we often use emojis to express the emotions associated with the messages. As emotions
+                    play a vital role in communication, the detection and analysis of the same is of vital importance in
+                    today’s digital world of remote communication. Emotion detection is a challenging task, because
+                    emotions
+                    are subjective. There is no common consensus on how to measure or categorize them. We define a SER
+                    system as a collection of methodologies that process and classify speech signals to detect emotions
+                    embedded in them. Such a system can find use in a wide variety of application areas like interactive
+                    voice based-assistant or caller-agent conversation analysis. In this study we attempt to detect
+                    underlying emotions in recorded speech by analysing the acoustic features of the audio data of
+                    recordings.
+                </p>
+
+
+        </section>
+
+
+
+        <div class="clear"></div>
+
+
+        <section class="contact" id="contact">
+            <h1>Contact</h1>
+            <hr />
+
+            <div class="content">
+
+                <div class="form">
+
+                    <form action="#" method="post" enctype="text/plain">
+
+                        <input name="your-name" id="your-name" value="YOUR NAME" />
+                        <input name="your-email" id="your-email" value="YOUR E-MAIL" />
+
+                        <textarea id="message" name="message">MESSAGE</textarea>
+
+                        <a href="#">
+                            <div class="button">
+                                <span>SEND</span>
+                            </div>
+                        </a>
+
+                    </form>
+
+                </div>
+
+
+                <div class="contact-text">
+
+                    To contact us please use the contact form visible<br /><br />
+
+                    When sending files, please use<br />
+                    the following e-mail<br /><br />
+
+                    <strong>Lift Me</strong><br /><br />
+
+                    e-mail: <strong>liftme@gmail.com</strong>
+
+                </div>
+
+
+            </div>
+
+        </section>
+
+        <div class="clear"></div>
+
+        <section class="footer">
+
+            <div class="margin">
+
+                <div class="menu-footer">
+
+                    <a href="#home">Home</a>
+                    <a href="#">LinkedIn</a>
+                    <a href="#">Instagram</a>
+                    <a href="#">Facebook</a>
+
+                </div>
+
+                <div class="copyright">© 2022. All Rights Reserved </div>
+
+            </div>
+
+
+        </section>
+    </div>
+</body>
+
+</html>
